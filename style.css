@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 68px;
+    margin: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+    text-decoration: none;
+    color: #000;
+    font-family: Inter;
+    font-size: 21.7px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 31px;
+}
+
+header .search-container {
+    position: relative;
+}
+
+header .search-container input[type="search"] {
+    padding-left: 30px;
+    border: none;
+    color: #5A607F;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+header .search-container input[type="search"]:focus {
+    outline: none;
+    border: none;
+}
+
+header .search-container input[type="search"]::-webkit-search-cancel-button,
+header .search-container input[type="search"]::-webkit-search-clear-button {
+  display: none;
+}
+
+header .search-container input[type="search"]::-ms-clear {
+  display: none;
+}
+
+header .search-container svg {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+header .header-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .header-link .message-svg {
+    margin-right: 20px;
+}
+
+header .header-link .notification {
+    display: flex;
+}
+
+header .header-link .notification span {
+    border-radius: 12px;
+    background: #1E5EFF;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: -4px;
+    right: 11px;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+}
+
+.menu-account .account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu-account .account .avatar {
+    background: #d3d3d3;
+    border-radius: 50%;
+    margin-right: 11px;
+}
+
+.menu-account .account p {
+    color: #5A607F;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    margin-right: 5px;
+}
+
+.menu-account .account .account-svg {
+    transition: all 0.3s ease;
+}
+
+.menu-account .account .popup {
+    position: absolute;
+    top: 60px;
+    border-radius: 10px;
+    color: #FFF;
+    background: #dfdfdf;
+    z-index: 1;
+}
+
+.menu-account .account .popup .popup-container {
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+}
+
+.menu-account .account .popup .popup-container a {
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+    text-decoration: none;
+    color: #5A607F;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.menu-account .account .popup .popup-container a:hover {
+    background: #1E5EFF;
+    color: #FFF;
+}
+
+main {
+    display: flex;
+    background: #F5F6FA;
+    box-shadow: -1px 0px 0px 0px #D7DBEC inset;
+}
+
+main .toolbar {
+    width: 250px;
+    padding: 20px 16px;
+    margin: 0;
+    border-right: 1px solid #D7DBEC;
+}
+
+main .toolbar .button {
+    display: flex;
+    align-items: center;
+    color: #5A607F;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    text-decoration: none;
+    padding: 10px 16px;
+}
+
+main .toolbar .button:hover {
+    border-radius: 4px;
+    color: #FFF;
+    background: #1E5EFF;
+}
+
+main .toolbar .active {
+    border-radius: 4px;
+    color: #FFF;
+    background: #1E5EFF;
+}
+
+main .toolbar .button svg {
+    margin-right: 16px;
+}
+
+main .toolbar .menu-title {
+    color: #A1A7C4;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    padding: 10px 16px;
+    margin-bottom: 0;
+}
+
+main .container {
+    width: 100%;
+    margin: 35px 40px;
+}
+
+main .container .close {
+    color: #5A607F;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    text-decoration: none;
+}
+
+.container-block h2 .title {
+    color: #131523;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+.container-block {
+    display: flex;
+}
+
+.container-block .menu {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.container-block .menu .button {
+    color: #131523;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    text-decoration: none;
+    opacity: 0.7;
+    padding: 12px 20px;
+    width: 220px;
+}
+
+.container-block .menu .button:hover {
+    border-radius: 4px;
+    background: #1E5EFF;
+    color: #FFF;
+}
+
+.container-block .content .search {
+    position: relative;
+}
+
+.container-block .content input[type="search"] {
+    border-radius: 4px;
+    border: 1px solid #D9E1EC;
+    background: #FFF;
+    padding: 8px 16px;
+    color: #A1A7C4;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    padding-left: 43px;
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.container-block .content input[type="search"]:focus {
+    outline: none;
+    border: 1px solid #D9E1EC;
+}
+
+.container-block .content input[type="search"]::-webkit-search-cancel-button,
+.container-block .content input[type="search"]::-webkit-search-clear-button {
+  display: none;
+}
+
+.container-block .content input[type="search"]::-ms-clear {
+  display: none;
+}
+
+.container-block .content .search svg {
+    position: absolute;
+    top: 40%;
+    left: 16px;
+    transform: translateY(-40%);
+}
+
+.container-block .content #content {
+    border-radius: 6px;
+    background: #FFF;
+    box-shadow: 0px 1px 4px 0px rgba(21, 34, 50, 0.08);
+    padding: 28px;
+}
+
+.container-block .content #content .title {
+    color: #131523;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+.container-block .content #content p {
+    color: #131523;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.container-block .content #content .initial-setup-block {
+    border-radius: 4px;
+    background: #F5F6FA;
+    padding: 20px;
+}
+
+.container-block .content #content .initial-setup-block p {
+    margin: 0;
+    color: #5A607F;
+}
+
+.container-block .content #content hr {
+    background: #E6E9F4;
+    height: 1px;
+    border: none;
+    margin: 28px 0;
+}
+
+.container-block .content #content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.container-block .content #content li {
+    counter-increment: list-item;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.container-block .content #content li:before {
+    content: counter(list-item); /* Вставляем значение счетчика в качестве содержимого псевдоэлемента ::before */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px; /* Задаем фиксированную ширину для выравнивания цифр */
+    height: 36px;
+    margin-right: 25px; /* Добавляем небольшой отступ между цифрой и текстом */
+    /*text-align: left; /* Выравниваем цифры по правому краю */
+    background: #F5F6FA;
+    border-radius: 50%;
+    color: #5A607F;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
