@@ -1,15 +1,15 @@
+//menu toolbabar
 const toolbarBtns = document.querySelectorAll('.button')
-
 toolbarBtns.forEach((toolbarBtn) => {
     toolbarBtn.addEventListener('click', () => {
         toolbarBtns.forEach(function(btn) {
             btn.classList.remove('active')
         })
         toolbarBtn.classList.add('active')
-        console.log('click')
     })
 })
-
+//end menu toolbabar
+//popup account
 const accountPopup = document.querySelector('.account')
 const accountSvg = document.querySelector('.account-svg')
 let popup = null
@@ -31,13 +31,32 @@ accountPopup.addEventListener('click', (e) => {
             </div>
         `
         accountPopup.appendChild(popup)
-        console.log('popup')
     }
 })
+//end popup account
 
+//menu content
+const menuContent = document.querySelector('.menu')
+menuContent.addEventListener('click', (e) => {
+    e.preventDefault()
+    if (e.target.classList.contains('menuContentButton')) {
+        const menuContentButtons = document.querySelectorAll('.menuContentButton')
+        const content = document.querySelectorAll('.content-container')
+        menuContentButtons.forEach((menuContentButton, index) => {
+            if (menuContentButton === e.target) {
+                menuContentButton.classList.add('active')
+                content[index].classList.add('active-content')
+            } else {
+                menuContentButton.classList.remove('active')
+                content[index].classList.remove('active-content')
+            }
+        })
+    }
+})
+//end menu content
 
+//tabs дополнительная информация
 const additionalBtn = document.querySelector('.additional-block-btn')
-
 additionalBtn.addEventListener('click', (e) => {
     e.preventDefault()
     if (e.target.classList.contains('additional-button')) {
@@ -54,3 +73,4 @@ additionalBtn.addEventListener('click', (e) => {
         })
     }
 })
+//end tabs дополнительная информация
