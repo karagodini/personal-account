@@ -34,3 +34,23 @@ accountPopup.addEventListener('click', (e) => {
         console.log('popup')
     }
 })
+
+
+const additionalBtn = document.querySelector('.additional-block-btn')
+
+additionalBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    if (e.target.classList.contains('additional-button')) {
+        const additionalButtons = document.querySelectorAll('.additional-button')
+        const additionalContent = document.querySelectorAll('.additional-content')
+        additionalButtons.forEach((additionalButton, index) => {
+            if (additionalButton === e.target) {
+                additionalButton.classList.add('active')
+                additionalContent[index].classList.add('active')
+            } else {
+                additionalButton.classList.remove('active')
+                additionalContent[index].classList.remove('active')
+            }
+        })
+    }
+})
