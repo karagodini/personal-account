@@ -212,18 +212,33 @@ main .toolbar .menu-title {
     margin-bottom: 0;
 }
 
+main .toolbar-mobile {
+    display: block;
+    position: absolute;
+    background: #fff;
+    border-top: 1px solid #ccc;
+    z-index: 9;
+}
+
 main .container {
     width: 100%;
     margin: 35px 40px;
 }
 
-main .container .mobile-menu {
+main .container .mobile-menu-open {
     display: none;
     cursor: pointer;
 }
 
-main .container .mobile-menu:hover {
-    
+main .toolbar .mobile-menu-close {
+    display: none;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+main .toolbar .mobile-menu-close img {
+    width: 40px;
 }
 
 main .container .close {
@@ -526,8 +541,9 @@ main .container .close {
         margin: 15px 10px !important;
     }
 
-    .mobile-menu {
+    .mobile-menu-open {
         display: block !important;
+        margin-top: 0;
     }
 }
 
@@ -555,12 +571,36 @@ main .container .close {
 }
 
 @media (max-width: 450px) {
+    header {
+        height: 50px;
+    }
+
     header .search-container input[type="search"] {
         width: 100px !important;
     }
 
     .menu-account {
         padding-left: 0;
+    }
+
+    .container-block .menu {
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .container-block .menu .menuContentButton {
+        width: 140px;
+        font-size: 12px;
+        padding: 7px 20px;
+    }
+
+    .container-block .content li:before {
+        width: 76px !important;
+        height: 26px !important;
+        margin-right: 15px !important;
     }
 
     .community {

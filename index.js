@@ -9,6 +9,26 @@ toolbarBtns.forEach((toolbarBtn) => {
     })
 })
 //end menu toolbabar
+
+//mobile toolbar
+    const mobileMenuOpen = document.querySelector('.mobile-menu-open')
+    const toolbar = document.querySelector('.toolbar')
+    const mobileContainer = document.querySelector('.container')
+    const mobileMenuClose = document.querySelector('.mobile-menu-close')
+    mobileMenuOpen.addEventListener('click', (e) => {
+        toolbar.classList.add('toolbar-mobile')
+        mobileContainer.style.opacity = '0.3'
+        mobileMenuClose.style.display = 'block'
+    })
+    mobileMenuClose.addEventListener('click', (e) => {
+        e.preventDefault()
+        toolbar.classList.remove('toolbar-mobile')
+        mobileContainer.style.opacity = '1'
+        mobileMenuClose.style.display = 'none'
+    })
+
+//end mobile toolbar
+
 //popup account
 const accountPopup = document.querySelector('.account')
 const accountSvg = document.querySelector('.account-svg')
